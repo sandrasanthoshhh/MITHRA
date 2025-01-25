@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Embroidery Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hand Embroidery Section Image Layout */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .image p {
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hand Embroidery Tutorials</h1>
+        
+        <!-- Hand Embroidery Images and Descriptions with Flexbox Layout -->
+        <div class="image-container">
+            <div class="image">
+                <a href="https://www.youtube.com/watch?v=TDiKkQ3YubM" target="_blank">
+                    <img src="media/he1.png" alt="Hand Embroidery 1">
+                </a>
+                <p>1. Rural Hand Embroidery: A Living Tradition</p>
+                <p>This video takes you into the heart of rural communities, where women continue to preserve the age-old art of hand embroidery...</p>
+            </div>
+            <div class="image">
+                <a href="https://www.youtube.com/watch?v=BJJpwemjn5w" target="_blank">
+                    <img src="media/he2.png" alt="Hand Embroidery 2">
+                </a>
+                <p>2. Modern Embroidery in the City: Craft Meets Fashion</p>
+                <p>In this video, we follow women in urban areas who are revamping hand embroidery to create stunning, contemporary pieces...</p>
+            </div>
+            <div class="image">
+                <a href="https://www.youtube.com/watch?v=1cHAUHrfkJs" target="_blank">
+                    <img src="media/he3.png" alt="Hand Embroidery 3">
+                </a>
+                <p>3. Empowering Rural Women Through Hand Embroidery</p>
+                <p>Hand embroidery has become a powerful tool for empowering women in rural areas...</p>
+            </div>
+            <div class="image">
+                <a href="https://www.youtube.com/watch?v=e1LzvzuA2sI" target="_blank">
+                    <img src="media/he4.png" alt="Hand Embroidery 4">
+                </a>
+                <p>4. Urban Embroidery Circles: Women Crafting Connections</p>
+                <p>This video highlights the growing trend of embroidery circles in urban communities, where women come together to share their passion...</p>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-btn" onclick="window.history.back()">Back</button>
+    </div>
+</body>
+</html>
