@@ -20,6 +20,11 @@
                 window.location.href = selectedOption + '.html';
             }
         }
+
+        // Function to redirect to Career Guidance page
+        function goToCareerGuidance() {
+            window.location.href = 'career_guidance.html';
+        }
     </script>
 </head>
 <body>
@@ -30,7 +35,7 @@
         <!-- Buttons -->
         <button class="btn" onclick="toggleDropdown()">Skill Development</button>
         <button class="btn">Financial Independence</button>
-        <button class="btn">Career Guidance</button>
+        <button class="btn" onclick="goToCareerGuidance()">Career Guidance</button>
 
         <!-- Dropdown menu for Skill Development -->
         <div id="skillDropdown" class="dropdown-menu">
