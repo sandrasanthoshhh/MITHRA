@@ -8,7 +8,7 @@
         /* Apply a clean and modern design */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f1f6f9; /* Light grey background */
+            background: linear-gradient(135deg, #ff6f61, #d2a5d8); /* Vibrant gradient background */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,25 +25,28 @@
             border-radius: 15px; /* Rounded corners */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
             transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+            background: linear-gradient(135deg, #4a90e2, #f5a623); /* Colorful gradient for content */
         }
 
         /* Hover effect for content box */
         .content:hover {
             transform: translateY(-10px); /* Elevate content box on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
         }
 
         /* Heading Styling */
         .content h1 {
             font-size: 2.4em;
             margin-bottom: 20px;
-            color: #4a90e2; /* Soft blue color */
+            color: #fff; /* White color for text */
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
         }
 
         /* Paragraph Styling */
         .content p {
             font-size: 1.1em;
-            color: #555; /* Greyish text color */
+            color: #fff; /* White text for better contrast */
             line-height: 1.6;
             margin-bottom: 30px;
         }
@@ -67,7 +70,7 @@
         .content a {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #e50d8b; /* Blue background for the button */
+            background-color: #ff6347; /* Vibrant red background for the button */
             color: white;
             text-decoration: none;
             font-size: 1.1em;
@@ -76,7 +79,7 @@
         }
 
         .content a:hover {
-            background-color: #ea0f8b; /* Darker blue on hover */
+            background-color: #ff4500; /* Darker red on hover */
         }
     </style>
 </head>
