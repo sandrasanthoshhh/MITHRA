@@ -1,0 +1,21 @@
+.scholarship-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.scholarship-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scholarship-buttons button:hover {
+    background-color: #45a049;
+}
