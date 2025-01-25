@@ -12,29 +12,20 @@
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Function to show videos and increase size based on the selected skill
-        function showVideosForSkill() {
+        // Function to show images and descriptions based on the selected skill
+        function showImagesForSkill() {
             const selectedOption = document.getElementById('skillSelect').value;
-            const allVideoContainers = document.querySelectorAll('.video-container');
-            const allVideos = document.querySelectorAll('.video-container video');
+            const allImageContainers = document.querySelectorAll('.image-container');
 
-            // Hide all video containers and reset video size
-            allVideoContainers.forEach(container => {
+            // Hide all image containers
+            allImageContainers.forEach(container => {
                 container.style.display = 'none';
             });
-            allVideos.forEach(video => {
-                video.classList.remove('large-video');
-            });
 
-            // Show the selected skill's video container and enlarge the videos
+            // Show the selected skill's image container
             if (selectedOption) {
-                const selectedContainer = document.getElementById(selectedOption + 'Videos');
+                const selectedContainer = document.getElementById(selectedOption + 'Images');
                 selectedContainer.style.display = 'block';
-
-                const selectedVideos = selectedContainer.querySelectorAll('video');
-                selectedVideos.forEach(video => {
-                    video.classList.add('large-video');
-                });
             }
         }
     </script>
@@ -51,7 +42,7 @@
 
         <!-- Dropdown menu for Skill Development -->
         <div id="skillDropdown" class="dropdown-menu">
-            <select id="skillSelect" onchange="showVideosForSkill()">
+            <select id="skillSelect" onchange="showImagesForSkill()">
                 <option value="">Select Skill</option>
                 <option value="knitting">Knitting</option>
                 <option value="hand-embroidery">Hand Embroidery</option>
@@ -60,105 +51,108 @@
             </select>
         </div>
 
-        <!-- Videos for Knitting (Initially Hidden) -->
-        <div id="knittingVideos" class="video-container" style="display:none;">
+        <!-- Images for Knitting (Initially Hidden) -->
+        <div id="knittingImages" class="image-container" style="display:none;">
             <h2>Knitting Tutorials</h2>
-            <!-- Video 1 -->
-            <video controls width="600">
-                <source src="video/knit1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 2 -->
-            <video controls width="600">
-                <source src="video/knit2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 3 -->
-            <video controls width="600">
-                <source src="video/knit3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 4 -->
-            <video controls width="600">
-                <source src="video/knit4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image">
+                <img src="media/knit1.png" alt="Knitting 1" width="400">
+                <p>1. Rural Knitting Traditions: A Craft Passed Through Generations
+                    In this video, we explore the knitting traditions passed down through generations in rural communities. Watch as women from small, tight-knit villages showcase the art of knitting, turning yarn into beautiful pieces that reflect their culture and history. Learn how knitting has become an essential part of rural life, offering both a creative outlet and a means of livelihood.</p>
+            </div>
+            <div class="image">
+                <img src="media/knit2.png" alt="Knitting 2" width="300">
+                <p>2. The Urban Knitter: Weaving Modern Trends into Classic Craft
+                    Step into the world of urban knitting, where city-dwelling women are blending traditional techniques with contemporary fashion. In this video, see how knitters from bustling cities use their skills to create stylish, eco-friendly clothing and accessories. From street fashion to sustainability, discover how urban knitters are putting their own twist on an age-old craft.</p>
+            </div>
+            <div class="image">
+                <img src="media/knit3.png" alt="Knitting 3" width="300">
+                <p>3. Knitting for a Cause: Empowering Women in Rural Communities
+                    This video highlights the powerful role knitting plays in empowering women in rural areas. Many women use their knitting skills to create products for sale, helping to support their families and uplift their communities. Hear inspiring stories of women turning their craft into a source of income, while fostering solidarity and collaboration within their rural networks.</p>
+            </div>
+            <div class="image">
+                <img src="media/knit4.png" alt="Knitting 4" width="300">
+                <p>4. Knitting as Therapy: Urban Women Finding Peace in the Craft
+                    In the fast-paced environment of urban life, knitting has become a form of therapy for many women looking to unwind. This video captures the calming effect of knitting, as women in cities use the craft to reduce stress, enhance mindfulness, and connect with their inner peace. Explore how knitting is becoming an essential tool for mental well-being in urban spaces.</p>
+            </div>
         </div>
 
-        <!-- Videos for Hand Embroidery (Initially Hidden) -->
-        <div id="hand-embroideryVideos" class="video-container" style="display:none;">
+        <!-- Images for Hand Embroidery (Initially Hidden) -->
+        <div id="hand-embroideryImages" class="image-container" style="display:none;">
             <h2>Hand Embroidery Tutorials</h2>
-            <!-- Video 1 -->
-            <video controls width="400">
-                <source src="hand_embroidery_video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 2 -->
-            <video controls width="400">
-                <source src="hand_embroidery_video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 3 -->
-            <video controls width="400">
-                <source src="hand_embroidery_video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 4 -->
-            <video controls width="400">
-                <source src="hand_embroidery_video4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image">
+                <img src="media/he1.png" alt="Hand Embroidery 1" width="300">
+                <p>1. Rural Hand Embroidery: A Living Tradition
+                    This video takes you into the heart of rural communities, where women continue to preserve the age-old art of hand embroidery. Watch as they skillfully weave intricate patterns into fabric, using techniques that have been passed down through generations. Discover how embroidery serves not just as a creative outlet, but as a vital part of rural life and heritage, bringing beauty to everyday items like clothing, linens, and more.</p>
+            </div>
+            <div class="image">
+                <img src="media/he2.png" alt="Hand Embroidery 2" width="300">
+                <p>2. Modern Embroidery in the City: Craft Meets Fashion
+                    In this video, we follow women in urban areas who are revamping hand embroidery to create stunning, contemporary pieces. These city-based artisans combine traditional techniques with modern design, using embroidery to enhance everything from high-fashion apparel to home décor. Explore how embroidery is being embraced as an art form in urban settings, merging the old with the new in bold, innovative ways.</p>
+            </div>
+            <div class="image">
+                <img src="media/he3.png" alt="Hand Embroidery 3" width="300">
+                <p>3. Empowering Rural Women Through Hand Embroidery
+                    Hand embroidery has become a powerful tool for empowering women in rural areas. In this video, we see how women use their embroidery skills to create beautifully crafted textiles that are sold locally and beyond, providing financial independence and social upliftment. Through storytelling and hands-on demonstrations, learn how embroidery is changing lives and strengthening rural communities.</p>
+            </div>
+            <div class="image">
+                <img src="media/he4.png" alt="Hand Embroidery 4" width="300">
+                <p>4. Urban Embroidery Circles: Women Crafting Connections
+                    This video highlights the growing trend of embroidery circles in urban communities, where women come together to share their passion for hand embroidery. From friendship and creativity to mental wellness, these gatherings offer a space for women to connect, learn, and support each other. See how embroidery fosters a sense of community and collaboration in the fast-paced world of city living.</p>
+            </div>
         </div>
 
-        <!-- Videos for Baking (Initially Hidden) -->
-        <div id="bakingVideos" class="video-container" style="display:none;">
+        <!-- Images for Baking (Initially Hidden) -->
+        <div id="bakingImages" class="image-container" style="display:none;">
             <h2>Baking Tutorials</h2>
-            <!-- Video 1 -->
-            <video controls width="400">
-                <source src="baking_video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 2 -->
-            <video controls width="400">
-                <source src="baking_video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 3 -->
-            <video controls width="400">
-                <source src="baking_video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 4 -->
-            <video controls width="400">
-                <source src="baking_video4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image">
+                <img src="media/b1.png" alt="Baking 1" width="300">
+                <p>1. Rural Baking Traditions: From Farm to Oven
+                    In this video, we journey into rural communities where women continue to bake using time-honored methods passed down through generations. Watch as they craft everything from rustic breads to sweet pastries, often using ingredients sourced directly from their farms. Explore how baking remains a cornerstone of rural life, nurturing families and communities with wholesome, homemade treats.</p>
+            </div>
+            <div class="image">
+                <img src="media/b2.png" alt="Baking 2" width="300">
+                <p>2. Urban Baking: Sweet Creations in the City
+                    Step into the vibrant world of urban baking, where women are turning their kitchens into creative hubs. From artisanal cakes to trendy desserts, this video captures how women in cities are redefining baking with modern flavors and inventive techniques. Discover how these bakers are mixing innovation with tradition, creating sweet masterpieces that cater to the dynamic pace of city life.</p>
+            </div>
+            <div class="image">
+                <img src="media/b3.png" alt="Baking 3" width="300">
+                <p>3. Baking for a Cause: Empowering Rural Women Through Pastries
+                    This video showcases the incredible impact baking has in empowering women in rural areas. Many women have turned their baking skills into businesses, selling everything from traditional breads to locally inspired pastries. Through their craft, they are not only supporting their families but also providing jobs and opportunities for other women in their communities.</p>
+            </div>
+            <div class="image">
+                <img src="media/b4.png" alt="Baking 4" width="300">
+                <p>4. Urban Baking Communities: Where Food and Friendship Meet
+In this video, we explore the rise of baking communities in urban areas, where women come together to share their love of baking, exchange recipes, and support each other’s creative endeavors. Whether through baking classes, pop-up bakeries, or social media collaborations, these urban bakers are creating spaces where food becomes a way to build connection and friendship in the city.</p>
+            </div>
         </div>
 
-        <!-- Videos for Stitching (Initially Hidden) -->
-        <div id="stitchingVideos" class="video-container" style="display:none;">
+        <!-- Images for Stitching (Initially Hidden) -->
+        <div id="stitchingImages" class="image-container" style="display:none;">
             <h2>Stitching Tutorials</h2>
-            <!-- Video 1 -->
-            <video controls width="400">
-                <source src="stitching_video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 2 -->
-            <video controls width="400">
-                <source src="stitching_video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 3 -->
-            <video controls width="400">
-                <source src="stitching_video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Video 4 -->
-            <video controls width="400">
-                <source src="stitching_video4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image">
+                <img src="media/stitch1.png" alt="Stitching 1" width="300">
+                <p>1. Stitching the Past: Traditional Techniques in Rural Communities
+                    This video takes us into rural areas where women are keeping traditional stitching techniques alive. From hand-stitched quilts to embroidered garments, watch as these women skillfully create intricate, meaningful pieces using methods passed down through generations. Learn how stitching remains an essential part of rural life, preserving culture, and creating both functional and artistic works</p>
+            </div>
+            <div class="image">
+                <img src="media/stitch2.png" alt="Stitching 2" width="300">
+                <p>2. Urban Stitching: Crafting the Modern World
+                    In this video, we explore the rise of stitching in urban areas, where women are using their skills to create stylish, innovative pieces. From fashion-forward clothing to bespoke accessories, urban stitching has become an outlet for self-expression and creativity. Discover how women in cities are bringing fresh energy to an ancient craft by blending modern design with traditional stitching techniques.</p>
+            </div>
+            <div class="image">
+                <img src="media/stitch3.png" alt="Stitching 3" width="300">
+                <p>3. Stitching for Empowerment: Rural Women Creating Change
+                    This video highlights how stitching is empowering women in rural communities, providing them with a means of income and independence. Watch as women use their stitching talents to create everything from handmade textiles to clothing, often selling their creations to support their families. Learn how this craft is transforming the lives of rural women and fostering a sense of pride and self-reliance.
+                    
+                    </p>
+            </div>
+            <div class="image">
+                <img src="media/stitch4.png" alt="Stitching 4" width="300">
+                <p>4. Urban Stitching Circles: Crafting Connection and Community
+                    Join us as we explore urban stitching circles where women gather to share their love of stitching and support each other. From collaborative art projects to skill-building workshops, these circles create spaces for creativity, learning, and building friendships. In the fast-paced world of the city, stitching becomes a tool for relaxation, connection, and empowerment, bringing women together one stitch at a time.</p>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
