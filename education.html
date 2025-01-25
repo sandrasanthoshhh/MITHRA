@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED for You...</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to toggle visibility of the dropdown menu for Skill Development
+        function toggleDropdown() {
+            const dropdown = document.getElementById('skillDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to show videos and increase size based on the selected skill
+        function showVideosForSkill() {
+            const selectedOption = document.getElementById('skillSelect').value;
+            const allVideoContainers = document.querySelectorAll('.video-container');
+            const allVideos = document.querySelectorAll('.video-container video');
+
+            // Hide all video containers and reset video size
+            allVideoContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+            allVideos.forEach(video => {
+                video.classList.remove('large-video');
+            });
+
+            // Show the selected skill's video container and enlarge the videos
+            if (selectedOption) {
+                const selectedContainer = document.getElementById(selectedOption + 'Videos');
+                selectedContainer.style.display = 'block';
+
+                const selectedVideos = selectedContainer.querySelectorAll('video');
+                selectedVideos.forEach(video => {
+                    video.classList.add('large-video');
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>ED for you...</h1>
+        <p>Welcome to the Education section! Below are some options for you:</p>
+
+        <!-- Buttons -->
+        <button class="btn" onclick="toggleDropdown()">Skill Development</button>
+        <button class="btn">Financial Independence</button>
+        <button class="btn">Career Guidance</button>
+
+        <!-- Dropdown menu for Skill Development -->
+        <div id="skillDropdown" class="dropdown-menu">
+            <select id="skillSelect" onchange="showVideosForSkill()">
+                <option value="">Select Skill</option>
+                <option value="knitting">Knitting</option>
+                <option value="hand-embroidery">Hand Embroidery</option>
+                <option value="baking">Baking</option>
+                <option value="stitching">Stitching</option>
+            </select>
+        </div>
+
+        <!-- Videos for Knitting (Initially Hidden) -->
+        <div id="knittingVideos" class="video-container" style="display:none;">
+            <h2>Knitting Tutorials</h2>
+            <!-- Video 1 -->
+            <video controls width="600">
+                <source src="video/knit1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 2 -->
+            <video controls width="600">
+                <source src="video/knit2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 3 -->
+            <video controls width="600">
+                <source src="video/knit3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 4 -->
+            <video controls width="600">
+                <source src="video/knit4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Videos for Hand Embroidery (Initially Hidden) -->
+        <div id="hand-embroideryVideos" class="video-container" style="display:none;">
+            <h2>Hand Embroidery Tutorials</h2>
+            <!-- Video 1 -->
+            <video controls width="400">
+                <source src="hand_embroidery_video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 2 -->
+            <video controls width="400">
+                <source src="hand_embroidery_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 3 -->
+            <video controls width="400">
+                <source src="hand_embroidery_video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 4 -->
+            <video controls width="400">
+                <source src="hand_embroidery_video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Videos for Baking (Initially Hidden) -->
+        <div id="bakingVideos" class="video-container" style="display:none;">
+            <h2>Baking Tutorials</h2>
+            <!-- Video 1 -->
+            <video controls width="400">
+                <source src="baking_video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 2 -->
+            <video controls width="400">
+                <source src="baking_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 3 -->
+            <video controls width="400">
+                <source src="baking_video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 4 -->
+            <video controls width="400">
+                <source src="baking_video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Videos for Stitching (Initially Hidden) -->
+        <div id="stitchingVideos" class="video-container" style="display:none;">
+            <h2>Stitching Tutorials</h2>
+            <!-- Video 1 -->
+            <video controls width="400">
+                <source src="stitching_video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 2 -->
+            <video controls width="400">
+                <source src="stitching_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 3 -->
+            <video controls width="400">
+                <source src="stitching_video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Video 4 -->
+            <video controls width="400">
+                <source src="stitching_video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
