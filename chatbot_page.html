@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance Chatbot</title>
+    <style>
+        /* Ensure body and HTML elements take full screen height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e4d7; /* Soft pastel background */
+        }
+
+        /* Set up the container to hold the iframe */
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            padding: 20px; /* Add padding around the content */
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Soft gradient background */
+        }
+
+        /* The iframe */
+        iframe {
+            width: 100%;
+            max-width: 800px; /* Maximum width of the iframe */
+            height: 500px;
+            border: none;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect for the iframe */
+        iframe:hover {
+            transform: scale(1.05); /* Slight zoom-in effect on hover */
+        }
+
+        /* Back button styling */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff6347; /* Bright orange-red color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ff4500; /* Darker shade on hover */
+        }
+
+        /* Optional: Add a responsive design for smaller screens */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Back button -->
+        <a href="education.html" class="back-btn">Back to Education</a>
+
+        <!-- The iframe displaying the chatbot -->
+        <iframe src="https://www.yeschat.ai/i/gpts-ZxX7eBRk-Career-Counselor"></iframe>
+    </div>
+
+</body>
+</html>

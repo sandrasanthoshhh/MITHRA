@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED for You...</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to toggle visibility of the dropdown menu for Skill Development
+        function toggleDropdown() {
+            const dropdown = document.getElementById('skillDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to redirect to the selected skill's page
+        function redirectToSkillPage() {
+            const selectedOption = document.getElementById('skillSelect').value;
+            if (selectedOption) {
+                // Redirect to the respective page based on the selected skill
+                window.location.href = selectedOption + '.html';
+            }
+        }
+
+        // Function to redirect to Career Guidance page
+        function goToCareerGuidance() {
+            window.location.href = 'career_guidance.html';
+        }
+
+        // Function to redirect to Financial Independence page
+        function goToFinancialIndependence() {
+            window.location.href = 'financial_independence.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>ED for you...</h1>
+        <p>Welcome to the Education section! Below are some options for you:</p>
+
+        <!-- Buttons -->
+        <button class="btn" onclick="toggleDropdown()">Skill Development</button>
+        <button class="btn" onclick="goToFinancialIndependence()">Financial Independence</button>
+        <button class="btn" onclick="goToCareerGuidance()">Career Guidance</button>
+
+        <!-- Dropdown menu for Skill Development -->
+        <div id="skillDropdown" class="dropdown-menu">
+            <select id="skillSelect" onchange="redirectToSkillPage()">
+                <option value="">Select Skill</option>
+                <option value="knitting">Knitting</option>
+                <option value="handmbroidery">Hand Embroidery</option>
+                <option value="baking">Baking</option>
+                <option value="stitching">Stitching</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
