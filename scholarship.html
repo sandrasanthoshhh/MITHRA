@@ -7,52 +7,77 @@
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        /* Center the title and make it larger */
+        h1 {
+            text-align: center;
+            font-size: 3em; /* Make the font larger */
+            margin-bottom: 20px; /* Add space below the title */
+            color: #333;
+        }
+
         .scholarship-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Center the images horizontally */
             align-items: center;
-            gap: 4cm; /* Set the gap between the two sections to 4cm */
+            gap: 1cm; /* Set a small gap between the images */
+            flex-wrap: nowrap; /* Prevent wrapping */
         }
+
+        .scholarship-item {
+            text-align: center;
+        }
+
         .scholarship-image img {
-            width: 100%;
-            max-width: 250px; /* Adjust the image size as needed */
-            height: auto;
-            border-radius: 8px;
-        }
+    width: 300px; /* Fixed width to ensure consistency */
+    height: 200px; /* Fixed height to maintain uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
         .scholarship-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .scholarship-buttons button {
             margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0055aa;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Scholarships</h1>
-        <p>Choose your category to explore available scholarships:</p>
 
         <!-- Scholarship container for College and School -->
         <div class="scholarship-container">
             <!-- College Scholarships Section -->
             <div class="scholarship-item">
                 <div class="scholarship-image">
-                    <img src="C:\Users\sandr\OneDrive\Desktop\collegee.jpg" alt="College Scholarships">
+                    <img src="C:\Users\sandr\OneDrive\Desktop\collegee.jpg" alt="College Scholarships" onclick="window.location.href='college-link.html'">
                 </div>
                 <div class="scholarship-buttons">
-                    <button onclick="window.location.href='college-scholarships.html'">College Scholarships</button>
+                    <button onclick="window.location.href='college-link.html'">College Scholarships</button>
                 </div>
             </div>
 
             <!-- School Scholarships Section -->
             <div class="scholarship-item">
                 <div class="scholarship-image">
-                    <img src="C:\Users\sandr\OneDrive\Desktop\schoolkid.webp" alt="School Scholarships">
+                    <img src="C:\Users\sandr\OneDrive\Desktop\schoolchild.webp" alt="School Scholarships" onclick="window.location.href='scholarship-links.html'">
                 </div>
                 <div class="scholarship-buttons">
-                    <button onclick="window.location.href='school-scholarships.html'">School Scholarships</button>
+                    <button onclick="window.location.href='school-link.html'">School Scholarships</button>
                 </div>
             </div>
         </div>
