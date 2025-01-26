@@ -18,22 +18,25 @@
             background: linear-gradient(135deg, #ff6f61, #d2a5d8, #f5a623); /* Vibrant gradient background */
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align to the top to allow scrolling */
             padding: 20px;
-            overflow: hidden;
+            overflow-y: auto; /* Allow vertical scrolling */
+            min-height: 100vh; /* Ensure body takes full height */
         }
 
-        /* Styling for the container */
+        /* Container for the page content */
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15);
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background: #ffffff; /* White background for content */
-            transition: all 0.3s ease;
+            position: relative;
+            margin-top: 20px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
 
         /* Hover effect for container */
