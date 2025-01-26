@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Job Opportunities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .job-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .job-post {
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .job-post h2 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #333;
+        }
+
+        .job-post p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .job-post .company-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .job-post .company-info span {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .job-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Local Job Opportunities</h1>
+        <div class="job-feed">
+            <!-- Job Post 1 -->
+            <a href="apply.html" class="job-post">
+                <h2>Software Developer at XYZ Corp</h2>
+                <p>We are looking for a software developer to join our tech team. If you have experience with web development, apply now!</p>
+                <div class="company-info">
+                    <span>Location: Bangalore</span>
+                    <span>Posted: 2 days ago</span>
+                </div>
+            </a>
+
+            <!-- Job Post 2 -->
+            <a href="apply.html" class="job-post">
+                <h2>Marketing Executive at ABC Ltd</h2>
+                <p>ABC Ltd is hiring a marketing executive to manage campaigns and enhance brand awareness. Apply today!</p>
+                <div class="company-info">
+                    <span>Location: Mumbai</span>
+                    <span>Posted: 5 days ago</span>
+                </div>
+            </a>
+
+            <!-- Job Post 3 -->
+            <a href="apply.html" class="job-post">
+                <h2>Customer Support Representative at DEF Inc.</h2>
+                <p>DEF Inc. is seeking customer support representatives for our growing team. Join us to provide excellent customer service!</p>
+                <div class="company-info">
+                    <span>Location: Delhi</span>
+                    <span>Posted: 1 week ago</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
