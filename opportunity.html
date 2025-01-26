@@ -4,14 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opportunities - MITHRA</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .opportunity-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .opportunity-card:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .opportunity-card i {
+            font-size: 50px;
+            color: #ffeb3b;
+            margin-bottom: 20px;
+        }
+
+        .opportunity-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #ffeb3b;
+        }
+
+        .opportunity-card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .opportunity-card h2 {
+                font-size: 1.5em;
+            }
+
+            .opportunity-card p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Explore Opportunities</h1>
         <div class="opportunities-grid">
-            <!-- Scholarships card updated with link to scholarships.html -->
             <a href="scholarship.html">
                 <div class="opportunity-card">
                     <i class="fa-solid fa-graduation-cap"></i>
