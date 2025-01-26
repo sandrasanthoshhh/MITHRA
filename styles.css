@@ -1,68 +1,151 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f7fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Opportunity Cards</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7b7b, #ff98a1, #fbbd77, #7af5c6); /* Colorful gradient background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
 
-.container {
-    text-align: center;
-    max-width: 1200px;
-    margin: 20px;
-}
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 20px;
+        }
 
-h1 {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 40px;
-}
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff; /* White color for the heading */
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adding a light shadow for contrast */
+        }
 
-.opportunities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
-}
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
 
-/* Remove underline for specific link */
-a {
-    text-decoration: none; /* This removes underline from all links */
-}
+        /* Remove underline for specific link */
+        a {
+            text-decoration: none; /* This removes underline from all links */
+        }
 
-.opportunity-card {
-    background: #fff;
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
+        .opportunity-card {
+            background: #fff;
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
 
-.opportunity-card:hover {
-    transform: translateY(-10px);
-}
+        /* Hover effect for card */
+        .opportunity-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.opportunity-card i {
-    font-size: 40px;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
+        /* Icon styling */
+        .opportunity-card i {
+            font-size: 40px;
+            color: #ff7b7b; /* Vibrant red color */
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
 
-.opportunity-card h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
+        .opportunity-card i:hover {
+            color: #ff98a1; /* Light pink color on hover */
+        }
 
-.opportunity-card p {
-    font-size: 1rem;
-    color: #666;
-}
+        /* Heading for cards */
+        .opportunity-card h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph for card description */
+        .opportunity-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient button */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #2575fc, #6a11cb);
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discover New Opportunities</h1>
+        <div class="opportunities-grid">
+            <div class="opportunity-card">
+                <i class="fas fa-laptop-code"></i>
+                <h2>Web Development</h2>
+                <p>Learn how to build websites and web applications with the latest tools.</p>
+            </div>
+
+            <div class="opportunity-card">
+                <i class="fas fa-robot"></i>
+                <h2>Artificial Intelligence</h2>
+                <p>Explore the exciting world of AI and machine learning with real-world applications.</p>
+            </div>
+
+            <div class="opportunity-card">
+                <i class="fas fa-paint-brush"></i>
+                <h2>Graphic Design</h2>
+                <p>Master the art of visual storytelling and design stunning graphics.</p>
+            </div>
+
+            <div class="opportunity-card">
+                <i class="fas fa-video"></i>
+                <h2>Video Production</h2>
+                <p>Learn how to create engaging and professional video content for all platforms.</p>
+            </div>
+        </div>
+
+        <a href="#" class="btn">Explore More</a>
+    </div>
+
+    <!-- FontAwesome icons (for opportunity cards) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
