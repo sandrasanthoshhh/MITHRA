@@ -4,7 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ED for You...</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7b7b, #ff98a1, #fbbd77, #0e1010); /* Colorful gradient background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #060f07;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn {
+            background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient button */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #2575fc, #6a11cb);
+            box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            width: 100%;
+            font-size: 16px;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        select:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 14px;
+            }
+
+            select {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ED for You...</h1>
+        <p>Welcome to the Education section! Below are some options for you:</p>
+
+        <!-- Buttons -->
+        <button class="btn" onclick="toggleDropdown()">Skill Development</button>
+        <button class="btn" onclick="goToFinancialIndependence()">Financial Independence</button>
+        <button class="btn" onclick="goToCareerGuidance()">Career Guidance</button>
+
+        <!-- Dropdown menu for Skill Development -->
+        <div id="skillDropdown" class="dropdown-menu">
+            <select id="skillSelect" onchange="redirectToSkillPage()">
+                <option value="">Select Skill</option>
+                <option value="knitting">Knitting</option>
+                <option value="handmbroidery">Hand Embroidery</option>
+                <option value="baking">Baking</option>
+                <option value="stitching">Stitching</option>
+            </select>
+        </div>
+    </div>
+
     <script>
         // Function to toggle visibility of the dropdown menu for Skill Development
         function toggleDropdown() {
@@ -31,27 +151,5 @@
             window.location.href = 'financial_independence.html';
         }
     </script>
-</head>
-<body>
-    <div class="container">
-        <h1>ED for you...</h1>
-        <p>Welcome to the Education section! Below are some options for you:</p>
-
-        <!-- Buttons -->
-        <button class="btn" onclick="toggleDropdown()">Skill Development</button>
-        <button class="btn" onclick="goToFinancialIndependence()">Financial Independence</button>
-        <button class="btn" onclick="goToCareerGuidance()">Career Guidance</button>
-
-        <!-- Dropdown menu for Skill Development -->
-        <div id="skillDropdown" class="dropdown-menu">
-            <select id="skillSelect" onchange="redirectToSkillPage()">
-                <option value="">Select Skill</option>
-                <option value="knitting">Knitting</option>
-                <option value="handmbroidery">Hand Embroidery</option>
-                <option value="baking">Baking</option>
-                <option value="stitching">Stitching</option>
-            </select>
-        </div>
-    </div>
 </body>
 </html>
