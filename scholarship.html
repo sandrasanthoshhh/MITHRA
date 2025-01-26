@@ -7,51 +7,110 @@
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        /* Center the title and make it larger */
-        h1 {
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141E30, #243B55);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
             text-align: center;
-            font-size: 3em; /* Make the font larger */
-            margin-bottom: 20px; /* Add space below the title */
-            color: #333;
+            max-width: 1200px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 3px solid #00f2fe;
+            padding-bottom: 15px;
         }
 
         .scholarship-container {
             display: flex;
-            justify-content: center; /* Center the images horizontally */
-            align-items: center;
-            gap: 1cm; /* Set a small gap between the images */
-            flex-wrap: nowrap; /* Prevent wrapping */
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .scholarship-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
             text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .scholarship-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.8);
         }
 
         .scholarship-image img {
-    width: 300px; /* Fixed width to ensure consistency */
-    height: 200px; /* Fixed height to maintain uniformity */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 8px;
-    cursor: pointer;
-}
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
 
+        .scholarship-image img:hover {
+            transform: scale(1.05);
+        }
 
         .scholarship-buttons {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 12px 20px;
+            font-size: 1.2em;
             background-color: #0077cc;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
             background-color: #0055aa;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .scholarship-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .scholarship-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
