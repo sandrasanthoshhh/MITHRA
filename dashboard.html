@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITHRA - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url("https://media.giphy.com/media/xUPGcKfcT5JW8HSPqk/giphy.gif") no-repeat center center/cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .dashboard-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+        .circle-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        }
+        .circle-button:hover {
+            transform: scale(1.1);
+        }
+        .opportunity {
+            background: #28a745;
+        }
+        .reporting {
+            background: #17a2b8;
+        }
+        .training {
+            background: #ffc107;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="dashboard-container">
+        <h1>HOW CAN I HELP YOU?</h1>
+        <div class="button-container">
+            <div class="circle-button opportunity">Opportunity</div>
+            <div class="circle-button reporting">Reporting</div>
+            <div class="circle-button training">Training</div>
+        </div>
+    </div>
+</body>
+</html>
